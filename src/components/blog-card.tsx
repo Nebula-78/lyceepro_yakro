@@ -1,7 +1,15 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Calendar, Clock, User, ArrowRight, Tag, BookmarkPlus, Share2, MessageCircle, Heart } from "lucide-react";
+import {
+  Calendar,
+  Clock,
+  User,
+  ArrowRight,
+  Tag,
+  BookmarkPlus,
+  Heart,
+} from "lucide-react";
 import Link from "next/link";
 
 export interface BlogPost {
@@ -25,45 +33,51 @@ interface BlogCardProps {
   variant?: "default" | "featured" | "compact" | "horizontal";
 }
 
-// Illustration placeholder SVG avec style africain
-function ArticleIllustration({ category, className }: { category: string; className?: string }) {
+// Illustration placeholder SVG avec style africain (optimized: ~15 elements)
+function ArticleIllustration({
+  category,
+  className,
+}: {
+  category: string;
+  className?: string;
+}) {
   const colors: Record<string, string> = {
-    "Événement": "#1a5f2a",
-    "Sport": "#e85d26",
-    "Culture": "#f0a030",
-    "Social": "#264653",
-    "Pédagogie": "#1a5f2a",
+    Événement: "#1a5f2a",
+    Sport: "#e85d26",
+    Culture: "#f0a030",
+    Social: "#264653",
+    Pédagogie: "#1a5f2a",
     "Vie scolaire": "#e85d26",
   };
 
   const color = colors[category] || "#1a5f2a";
 
   return (
-    <svg className={className} viewBox="0 0 400 250" fill="none" xmlns="http://www.w3.org/2000/svg">
-      {/* Background pattern */}
+    <svg
+      className={className}
+      viewBox="0 0 400 250"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <rect width="400" height="250" fill={color} opacity="0.1" />
 
-      {/* African-inspired geometric patterns */}
       <g opacity="0.3">
-        {/* Kente-inspired diamonds */}
         <path d="M100 60L130 30L160 60L130 90Z" fill={color} opacity="0.4" />
-        <path d="M200 100L230 70L260 100L230 130Z" fill={color} opacity="0.3" />
-        <path d="M300 140L330 110L360 140L330 170Z" fill={color} opacity="0.2" />
-
-        {/* Zigzag lines */}
-        <path d="M0 180L50 160L100 180L150 160L200 180L250 160L300 180L350 160L400 180" stroke={color} strokeWidth="2" opacity="0.2" />
-        <path d="M0 200L50 180L100 200L150 180L200 200L250 180L300 200L350 180L400 200" stroke={color} strokeWidth="1.5" opacity="0.15" />
-
-        {/* Circles */}
+        <path d="M250 100L280 70L310 100L280 130Z" fill={color} opacity="0.3" />
+        <path
+          d="M0 180L50 160L100 180L150 160L200 180L250 160L300 180L350 160L400 180"
+          stroke={color}
+          strokeWidth="2"
+          opacity="0.2"
+        />
         <circle cx="80" cy="150" r="25" fill={color} opacity="0.15" />
         <circle cx="320" cy="80" r="35" fill={color} opacity="0.1" />
 
-        {/* Dots pattern */}
-        {Array.from({ length: 20 }).map((_, i) => (
+        {Array.from({ length: 8 }).map((_, i) => (
           <circle
             key={i}
-            cx={(i % 5) * 80 + 40}
-            cy={Math.floor(i / 5) * 50 + 30}
+            cx={(i % 4) * 100 + 50}
+            cy={Math.floor(i / 4) * 80 + 40}
             r="2"
             fill={color}
             opacity="0.2"
@@ -71,30 +85,46 @@ function ArticleIllustration({ category, className }: { category: string; classN
         ))}
       </g>
 
-      {/* Category icon area */}
       <g transform="translate(160, 90)">
         <circle cx="40" cy="40" r="35" fill={color} opacity="0.2" />
-        <circle cx="40" cy="40" r="25" fill={color} opacity="0.3" />
         <circle cx="40" cy="40" r="15" fill={color} opacity="0.5" />
       </g>
 
-      {/* Decorative lines */}
-      <line x1="30" y1="220" x2="150" y2="220" stroke={color} strokeWidth="3" opacity="0.2" />
-      <line x1="30" y1="230" x2="100" y2="230" stroke={color} strokeWidth="2" opacity="0.15" />
+      <line
+        x1="30"
+        y1="220"
+        x2="150"
+        y2="220"
+        stroke={color}
+        strokeWidth="3"
+        opacity="0.2"
+      />
     </svg>
   );
 }
 
-function CategoryBadge({ category, color }: { category: string; color: string }) {
+function CategoryBadge({
+  category,
+  color,
+}: {
+  category: string;
+  color: string;
+}) {
   return (
-    <span className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold ${color}`}>
+    <span
+      className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold ${color}`}
+    >
       <Tag className="w-3 h-3" />
       {category}
     </span>
   );
 }
 
-export default function BlogCard({ post, index = 0, variant = "default" }: BlogCardProps) {
+export default function BlogCard({
+  post,
+  index = 0,
+  variant = "default",
+}: BlogCardProps) {
   if (variant === "featured") {
     return (
       <motion.article
@@ -108,21 +138,26 @@ export default function BlogCard({ post, index = 0, variant = "default" }: BlogC
           <div className="relative bg-white rounded-3xl shadow-xl border border-gray-100/80 overflow-hidden hover:shadow-2xl transition-all duration-500">
             {/* Image area */}
             <div className="relative h-72 sm:h-80 overflow-hidden">
-              <ArticleIllustration category={post.category} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+              <ArticleIllustration
+                category={post.category}
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              />
 
               {/* Gradient overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
 
               {/* Category badge */}
               <div className="absolute top-6 left-6">
-                <CategoryBadge category={post.category} color={post.categoryColor} />
+                <CategoryBadge
+                  category={post.category}
+                  color={post.categoryColor}
+                />
               </div>
 
               {/* Featured badge */}
               <div className="absolute top-6 right-6">
                 <span className="px-3 py-1.5 rounded-lg bg-accent text-white text-xs font-bold flex items-center gap-1.5">
-                  <Heart className="w-3 h-3 fill-current" />
-                  À la une
+                  <Heart className="w-3 h-3 fill-current" />À la une
                 </span>
               </div>
 
@@ -174,12 +209,18 @@ export default function BlogCard({ post, index = 0, variant = "default" }: BlogC
           <div className="flex gap-5 bg-white rounded-2xl shadow-md border border-gray-100/80 overflow-hidden hover:shadow-xl transition-all duration-500">
             {/* Image */}
             <div className="w-48 sm:w-56 flex-shrink-0 overflow-hidden">
-              <ArticleIllustration category={post.category} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <ArticleIllustration
+                category={post.category}
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
             </div>
 
             {/* Content */}
             <div className="flex-1 p-5 flex flex-col justify-center">
-              <CategoryBadge category={post.category} color={post.categoryColor} />
+              <CategoryBadge
+                category={post.category}
+                color={post.categoryColor}
+              />
               <h3 className="font-heading font-bold text-lg text-dark mt-2 mb-2 group-hover:text-primary transition-colors line-clamp-2">
                 {post.title}
               </h3>
@@ -214,7 +255,10 @@ export default function BlogCard({ post, index = 0, variant = "default" }: BlogC
       >
         <Link href={`/journal/${post.slug}`} className="block">
           <div className="bg-white rounded-xl shadow-sm border border-gray-100/80 p-5 hover:shadow-lg hover:border-primary/20 transition-all duration-300">
-            <CategoryBadge category={post.category} color={post.categoryColor} />
+            <CategoryBadge
+              category={post.category}
+              color={post.categoryColor}
+            />
             <h3 className="font-heading font-bold text-base text-dark mt-2 mb-2 group-hover:text-primary transition-colors line-clamp-2">
               {post.title}
             </h3>
@@ -247,12 +291,18 @@ export default function BlogCard({ post, index = 0, variant = "default" }: BlogC
         <div className="relative h-full bg-white rounded-2xl shadow-lg border border-gray-100/80 overflow-hidden hover:shadow-xl transition-all duration-500">
           {/* Image area */}
           <div className="relative h-48 overflow-hidden">
-            <ArticleIllustration category={post.category} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+            <ArticleIllustration
+              category={post.category}
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+            />
             <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
 
             {/* Category */}
             <div className="absolute top-4 left-4">
-              <CategoryBadge category={post.category} color={post.categoryColor} />
+              <CategoryBadge
+                category={post.category}
+                color={post.categoryColor}
+              />
             </div>
 
             {/* Bookmark */}
@@ -276,7 +326,10 @@ export default function BlogCard({ post, index = 0, variant = "default" }: BlogC
             {/* Tags */}
             <div className="flex flex-wrap gap-1.5 mb-4">
               {post.tags.slice(0, 3).map((tag) => (
-                <span key={tag} className="px-2 py-1 rounded-md bg-muted text-muted-foreground text-xs font-medium">
+                <span
+                  key={tag}
+                  className="px-2 py-1 rounded-md bg-muted text-muted-foreground text-xs font-medium"
+                >
                   #{tag}
                 </span>
               ))}

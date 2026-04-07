@@ -13,7 +13,7 @@ interface HeroProps {
   showScrollIndicator?: boolean;
 }
 
-// African-inspired decorative SVG pattern
+// African-inspired decorative SVG pattern (optimized: ~10 elements)
 function AfricanPattern({ className }: { className?: string }) {
   return (
     <svg
@@ -22,7 +22,6 @@ function AfricanPattern({ className }: { className?: string }) {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      {/* Kente-inspired pattern */}
       <rect
         x="50"
         y="50"
@@ -32,37 +31,12 @@ function AfricanPattern({ className }: { className?: string }) {
         opacity="0.08"
       />
       <rect
-        x="130"
-        y="50"
-        width="60"
-        height="60"
-        fill="currentColor"
-        opacity="0.05"
-      />
-      <rect
         x="210"
         y="50"
         width="60"
         height="60"
         fill="currentColor"
         opacity="0.08"
-      />
-      <rect
-        x="290"
-        y="50"
-        width="60"
-        height="60"
-        fill="currentColor"
-        opacity="0.05"
-      />
-
-      <rect
-        x="90"
-        y="110"
-        width="60"
-        height="60"
-        fill="currentColor"
-        opacity="0.06"
       />
       <rect
         x="170"
@@ -73,15 +47,6 @@ function AfricanPattern({ className }: { className?: string }) {
         opacity="0.1"
       />
       <rect
-        x="250"
-        y="110"
-        width="60"
-        height="60"
-        fill="currentColor"
-        opacity="0.06"
-      />
-
-      <rect
         x="50"
         y="170"
         width="60"
@@ -90,37 +55,12 @@ function AfricanPattern({ className }: { className?: string }) {
         opacity="0.1"
       />
       <rect
-        x="130"
-        y="170"
-        width="60"
-        height="60"
-        fill="currentColor"
-        opacity="0.06"
-      />
-      <rect
         x="210"
         y="170"
         width="60"
         height="60"
         fill="currentColor"
         opacity="0.1"
-      />
-      <rect
-        x="290"
-        y="170"
-        width="60"
-        height="60"
-        fill="currentColor"
-        opacity="0.06"
-      />
-
-      <rect
-        x="90"
-        y="230"
-        width="60"
-        height="60"
-        fill="currentColor"
-        opacity="0.08"
       />
       <rect
         x="170"
@@ -131,37 +71,12 @@ function AfricanPattern({ className }: { className?: string }) {
         opacity="0.06"
       />
       <rect
-        x="250"
-        y="230"
-        width="60"
-        height="60"
-        fill="currentColor"
-        opacity="0.08"
-      />
-
-      <rect
-        x="50"
-        y="290"
-        width="60"
-        height="60"
-        fill="currentColor"
-        opacity="0.06"
-      />
-      <rect
         x="130"
         y="290"
         width="60"
         height="60"
         fill="currentColor"
         opacity="0.08"
-      />
-      <rect
-        x="210"
-        y="290"
-        width="60"
-        height="60"
-        fill="currentColor"
-        opacity="0.06"
       />
       <rect
         x="290"
@@ -171,8 +86,6 @@ function AfricanPattern({ className }: { className?: string }) {
         fill="currentColor"
         opacity="0.08"
       />
-
-      {/* Diamonds */}
       <path
         d="M100 100L120 80L140 100L120 120Z"
         fill="currentColor"
@@ -183,16 +96,11 @@ function AfricanPattern({ className }: { className?: string }) {
         fill="currentColor"
         opacity="0.15"
       />
-      <path
-        d="M300 300L320 280L340 300L320 320Z"
-        fill="currentColor"
-        opacity="0.12"
-      />
     </svg>
   );
 }
 
-// Graduation cap illustration
+// Graduation cap illustration (optimized: ~10 elements)
 function EducationIllustration({ className }: { className?: string }) {
   return (
     <svg
@@ -221,15 +129,6 @@ function EducationIllustration({ className }: { className?: string }) {
         opacity="0.15"
       />
       <rect
-        x="180"
-        y="270"
-        width="40"
-        height="50"
-        rx="4"
-        fill="white"
-        opacity="0.15"
-      />
-      <rect
         x="240"
         y="270"
         width="40"
@@ -239,7 +138,7 @@ function EducationIllustration({ className }: { className?: string }) {
         opacity="0.15"
       />
       <rect
-        x="300"
+        x="340"
         y="270"
         width="40"
         height="50"
@@ -247,7 +146,6 @@ function EducationIllustration({ className }: { className?: string }) {
         fill="white"
         opacity="0.15"
       />
-
       {/* Door */}
       <rect
         x="210"
@@ -258,11 +156,8 @@ function EducationIllustration({ className }: { className?: string }) {
         fill="white"
         opacity="0.2"
       />
-      <circle cx="280" cy="345" r="3" fill="white" opacity="0.4" />
-
       {/* Roof */}
       <path d="M80 250L250 180L420 250Z" fill="white" opacity="0.15" />
-
       {/* Graduation cap */}
       <path d="M250 100L180 130L250 160L320 130Z" fill="white" opacity="0.9" />
       <path
@@ -270,42 +165,11 @@ function EducationIllustration({ className }: { className?: string }) {
         fill="white"
         opacity="0.6"
       />
-      <rect
-        x="310"
-        y="120"
-        width="6"
-        height="60"
-        rx="3"
-        fill="white"
-        opacity="0.7"
-      />
       <circle cx="313" cy="180" r="8" fill="white" opacity="0.8" />
-
-      {/* Books */}
-      <rect
-        x="140"
-        y="310"
-        width="25"
-        height="35"
-        rx="2"
-        fill="white"
-        opacity="0.2"
-      />
-      <rect
-        x="145"
-        y="305"
-        width="25"
-        height="35"
-        rx="2"
-        fill="white"
-        opacity="0.15"
-      />
-
       {/* Stars */}
       <circle cx="100" cy="80" r="3" fill="white" opacity="0.5" />
       <circle cx="400" cy="60" r="2" fill="white" opacity="0.4" />
       <circle cx="350" cy="120" r="2.5" fill="white" opacity="0.6" />
-      <circle cx="150" cy="50" r="2" fill="white" opacity="0.3" />
     </svg>
   );
 }

@@ -210,15 +210,15 @@ const events = [
   },
 ];
 
-// Decorative SVG component
+// Decorative SVG component (optimized: 12 elements)
 function DecorativeDots({ className }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 100 100" fill="none">
-      {Array.from({ length: 25 }).map((_, i) => (
+      {Array.from({ length: 12 }).map((_, i) => (
         <circle
           key={i}
-          cx={(i % 5) * 25 + 10}
-          cy={Math.floor(i / 5) * 25 + 10}
+          cx={(i % 4) * 30 + 10}
+          cy={Math.floor(i / 4) * 30 + 10}
           r="2"
           fill="currentColor"
           opacity="0.2"

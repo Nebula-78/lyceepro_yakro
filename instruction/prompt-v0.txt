@@ -1,0 +1,333 @@
+
+Créer un site web moderne et professionnel pour le **Lycée Professionnel de Yamoussoukro** en utilisant React, TypeScript, Tailwind CSS, et shadcn/ui.
+
+## 🎨 DESIGN SYSTEM
+
+**Palette de couleurs :**
+- Primary: #1a5f2a (Vert forêt - éducation)
+- Secondary: #ff6b35 (Orange énergie)
+- Accent: #f4a261 (Orange clair)
+- Light: #e9c46a (Jaune doré)
+- Dark: #264653 (Bleu foncé)
+- Background: #ffffff / #f4f4f4
+- Text: #2d3436
+
+**Typography:**
+- Headings: Inter, bold
+- Body: Inter, regular
+- Utiliser des tailles responsives
+
+**Style général:**
+- Design épuré, moderne, institutionnel
+- Animations fluides avec Framer Motion
+- Composants glassmorphism pour les cartes
+- Icons avec Lucide React
+- Responsive mobile-first
+
+---
+
+## 📱 STRUCTURE DES PAGES
+
+### 1. PAGE D'ACCUEIL ("/")
+**Hero Section:**
+- Full-height (100vh) avec image de fond overlay gradient
+- Titre: "Lycée Professionnel de Yamoussoukro"
+- Sous-titre: "Excellence technique et formation professionnelle de qualité"
+- 2 CTAs: "Découvrir nos filières" (primary) + "Nous contacter" (outline)
+- Scroll indicator animé
+
+**Stats Section:**
+- 4 cartes avec chiffres clés:
+  - 1500+ Élèves formés
+  - 12 Filières
+  - 85% Taux de réussite
+  - 45 Enseignants
+
+**Mission/Vision Section:**
+- 3 cartes avec icons:
+  - Mission: Former des professionnels compétents
+  - Vision: Centre d'excellence technique
+  - Valeurs: Excellence, Professionalisme, Innovation, Solidarité, Intégrité
+
+**Filières Preview:**
+- Grid 3 colonnes des filières populaires
+- Cards avec hover effect
+
+**Infrastructures Preview:**
+- Grid 4 colonnes (Labo, Internat, Réfectoire, Sport)
+- Cards avec image/icon et lien
+
+**Actualités Section:**
+- Liste des 3 derniers événements
+- Format date + titre + description + tag catégorie
+
+---
+
+### 2. À PROPOS ("/a-propos")
+**Header:** Gradient background avec titre
+
+**Timeline Historique:**
+- 1985: Création
+- 1995: Expansion
+- 2008: Modernisation
+- 2024: Aujourd'hui
+
+**Équipe Section:**
+- Grid 4 colonnes
+- Photos (placeholders) + nom + rôle + bio courte
+
+**Partenaires:**
+- Logos institutionnels (MINISTÈRE, ONEF, CETEM, CCI)
+
+---
+
+### 3. FILIÈRES ("/filieres")
+**Catégories:**
+
+**A. Filières Industrielles (4 cards):**
+- Électrotechnique [CAP, BEP, BAC PRO, BT] - 2-4 ans
+- Mécanique Automobile [CAP, BEP, BAC PRO] - 2-3 ans
+- Froid et Climatisation [CAP, BEP] - 2 ans
+- Maintenance Systèmes Production [BAC PRO, BTS] - 2-3 ans
+
+**B. Filières Tertiaires (3 cards):**
+- Gestion des Entreprises [BAC PRO, BTS] - 2-3 ans
+- Comptabilité et Gestion [CAP, BEP, BAC PRO, BTS] - 2-3 ans
+- Secrétariat Bureautique [CAP, BEP, BAC PRO] - 2-3 ans
+
+**C. Filières Agricoles (2 cards):**
+- Productions Agricoles [CAPA, BEPA, BAC PRO] - 2-3 ans
+- Agroalimentaire [CAP, BEP, BAC PRO] - 2-3 ans
+
+**Card Design:**
+- Gradient background (primary)
+- Icon en haut
+- Titre
+- Description
+- Tags diplômes
+- Badge durée
+
+---
+
+### 4. DIPLÔMES ("/diplomes")
+**Liste des diplômes (5 cards verticales):**
+
+1. **CAP** (Niveau 5)
+   - Durée: 2 ans | Accès: BEPC | Débouchés: Ouvrier qualifié
+
+2. **BEP** (Niveau 4)
+   - Durée: 2 ans | Accès: BEPC/CAP | Débouchés: Employé qualifié
+
+3. **BAC PRO** (Niveau 4)
+   - Durée: 3 ans | Accès: 3ème/BEP | Débouchés: Technicien
+
+4. **BT** (Niveau 4)
+   - Durée: 2 ans après Bac | Accès: Bac | Débouchés: Technicien supérieur
+
+5. **BTS** (Niveau 3)
+   - Durée: 2 ans après Bac | Accès: Bac | Débouchés: Cadre technique
+
+**Tableau comparatif:**
+- Colonnes: Diplôme | Niveau | Filières concernées
+
+---
+
+### 5. INFRASTRUCTURES - Pages dédiées
+
+**Laboratoires ("/infrastructures/laboratoires"):**
+- Gallery 4 images (Physique, Chimie, Info, Électro)
+- Liste équipements (50 ordinateurs, tableaux électriques, microscopes, établis)
+- Horaires: Lun-Ven 7h30-17h30
+
+**Internat ("/infrastructures/internat"):**
+- Capacité d'accueil
+- Photos chambres
+- Conditions de vie
+- Règlement intérieur
+
+**Réfectoire ("/infrastructures/refectoire"):**
+- Capacité
+- Menus type
+- Horaires repas
+- Standards nutritionnels
+
+**Foyer ("/infrastructures/foyer"):**
+- Espace détente
+- Bibliothèque/CDI
+- Salle TV
+- Activités proposées
+
+**Infirmerie ("/infrastructures/infirmerie"):**
+- Personnel soignant
+- Équipements médicaux
+- Horaires
+- Protocoles santé
+
+**Salles de Classe ("/infrastructures/salles"):**
+- Nombre et capacité
+- Équipements (tableaux interactifs, clim)
+- Photos
+
+**Administration ("/infrastructures/administration"):**
+- Organigramme
+- Services (scolarité, orientation)
+- Horaires ouverture
+
+**Terrain de Sport ("/infrastructures/sport"):**
+- Installations (foot, basket, hand, athlétisme)
+- Équipements
+- Compétitions
+
+---
+
+### 6. ACTUALITÉS ("/actualites")
+**Liste événements avec:**
+- Date formatée (box colorée)
+- Titre
+- Description
+- Catégorie (tag coloré)
+- Image (optionnel)
+
+**Événements exemples:**
+- 15 Déc: Journée Portes Ouvertes
+- 22 Déc: Cérémonie Remise Diplômes
+- 10 Jan: Concours Robotique
+
+---
+
+### 7. VIE SCOLAIRE ("/vie-scolaire")
+- Association Parents d'Élèves (APE)
+- Conseil de Vie Lycéenne (CVL)
+- Clubs et associations (théâtre, musique, robotique)
+- Projets pédagogiques
+- Téléchargement règlement intérieur (PDF)
+
+---
+
+### 8. ORIENTATION ("/orientation")
+- Fiches métiers par filière
+- Taux d'insertion professionnelle
+- Poursuite d'études
+- Témoignages anciens élèves (quotes)
+- Partenaires entreprises
+
+---
+
+### 9. ADMISSIONS ("/admissions")
+- Conditions d'admission par niveau
+- Procédure inscription (étapes)
+- Documents requis (liste check)
+- Calendrier (timeline)
+- Frais de scolarité (tableau)
+- FAQ accordion
+- Formulaire pré-inscription
+
+---
+
+### 10. CONTACT ("/contact")
+**Layout 2 colonnes:**
+
+**Colonne gauche - Infos:**
+- Adresse: Yamoussoukro, Côte d'Ivoire
+- Téléphones: Standard + Scolarité
+- Emails: contact@... + scolarite@...
+- Horaires: Lun-Ven 7h30-16h30
+
+**Colonne droite - Formulaire:**
+- Nom complet (input)
+- Email (input)
+- Sujet (select: Admission, Renseignement, Partenariat, Autre)
+- Message (textarea)
+- Bouton "Envoyer"
+
+**Carte:** Google Maps embed (placeholder)
+
+---
+
+## 🧩 COMPOSANTS REUTILISABLES
+
+**Navbar:**
+- Fixed top, transparent → solid on scroll
+- Logo + liens navigation
+- Dropdown "Infrastructures" avec 8 sous-liens
+- CTA Contact
+- Mobile: hamburger menu
+
+**Footer:**
+- 4 colonnes: Logo+RS, Navigation, Infrastructures, Contact
+- Bottom bar copyright
+- Icons réseaux sociaux
+
+**Cards:**
+- FiliereCard: gradient, icon, tags
+- InfrastructureCard: image, titre, description, link
+- EventCard: date box, contenu, category tag
+- TeamCard: avatar, nom, rôle
+
+**Éléments UI:**
+- Boutons: primary (orange), secondary, outline
+- Section titles avec underline animé
+- Breadcrumbs sur pages profondes
+
+---
+
+## ⚙️ FONCTIONNALITÉS TECHNIQUES
+
+- Routing: Next.js App Router
+- Animations: Framer Motion (fade in, slide up, stagger)
+- Responsive: Tailwind breakpoints (sm, md, lg, xl)
+- Images: Next/Image optimization
+- SEO: Metadata par page
+- Performance: Lazy loading, code splitting
+- Accessibility: ARIA labels, contrast ratios
+
+---
+
+## 📦 STRUCTURE DES FICHIERS
+
+```
+app/
+├── page.tsx (Home)
+├── layout.tsx
+├── globals.css
+├── a-propos/page.tsx
+├── filieres/page.tsx
+├── diplomes/page.tsx
+├── infrastructures/
+│   ├── laboratoires/page.tsx
+│   ├── internat/page.tsx
+│   ├── refectoire/page.tsx
+│   ├── foyer/page.tsx
+│   ├── infirmerie/page.tsx
+│   ├── salles/page.tsx
+│   ├── administration/page.tsx
+│   └── sport/page.tsx
+├── actualites/page.tsx
+├── vie-scolaire/page.tsx
+├── orientation/page.tsx
+├── admissions/page.tsx
+└── contact/page.tsx
+
+components/
+├── navbar.tsx
+├── footer.tsx
+├── hero.tsx
+├── filiere-card.tsx
+├── infrastructure-card.tsx
+├── event-card.tsx
+├── team-card.tsx
+├── contact-form.tsx
+└── section-title.tsx
+```
+
+---
+
+## 🎯 OBJECTIFS UX
+
+- Navigation intuitive (max 2 clics pour tout atteindre)
+- Temps de chargement < 3s
+- Design institutionnel sérieux mais moderne
+- Mobile-first (60% traffic mobile attendu)
+- Accessibilité WCAG 2.1 AA
+
+Générer le code complet avec toutes les pages et composants fonctionnels.

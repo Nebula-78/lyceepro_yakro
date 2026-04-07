@@ -92,29 +92,38 @@ const missions = [
 
 const filieres = [
   {
-    title: "Électrotechnique",
+    title: "Électronique (ELN)",
     description:
-      "Formation complète aux systèmes électriques industriels et domestiques.",
+      "Conception, installation et maintenance des systèmes et équipements électroniques.",
     icon: Cpu,
-    diplomes: ["CAP", "BEP", "BAC PRO", "BT"],
-    duree: "2-4 ans",
+    diplomes: ["BT"],
+    duree: "2 ans",
     href: "/filieres",
   },
   {
-    title: "Mécanique Automobile",
+    title: "Électricité d'Équipement (EE)",
     description:
-      "Diagnostic, réparation et maintenance des véhicules automobiles.",
+      "Installation et maintenance des équipements électriques industriels et domestiques.",
     icon: Wrench,
-    diplomes: ["CAP", "BEP", "BAC PRO"],
-    duree: "2-3 ans",
+    diplomes: ["CAP"],
+    duree: "2 ans",
     href: "/filieres",
   },
   {
-    title: "Froid et Climatisation",
+    title: "Froid et Climatisation (RCA)",
     description:
-      "Installation et maintenance des systèmes de réfrigération et climatisation.",
+      "Installation, entretien et dépannage des systèmes de réfrigération et climatisation.",
     icon: Snowflake,
-    diplomes: ["CAP", "BEP"],
+    diplomes: ["BT"],
+    duree: "2 ans",
+    href: "/filieres",
+  },
+  {
+    title: "Maintenance Véhicules et Engins (MVE)",
+    description:
+      "Diagnostic, réparation et maintenance des véhicules automobiles et engins lourds.",
+    icon: Factory,
+    diplomes: ["BT"],
     duree: "2 ans",
     href: "/filieres",
   },

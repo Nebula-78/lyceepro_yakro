@@ -15,64 +15,20 @@ const diplomes = [
     debouches: "Ouvrier qualifié",
     description:
       "Le Certificat d'Aptitude Professionnelle forme des ouvriers qualifiés dans un métier précis.",
-    filieres: [
-      "Électrotechnique",
-      "Mécanique Auto",
-      "Froid",
-      "Comptabilité",
-      "Secrétariat",
-      "Agroalimentaire",
-    ],
-  },
-  {
-    nom: "BEP",
-    niveau: "Niveau 4",
-    duree: "2 ans",
-    acces: "BEPC / CAP",
-    debouches: "Employé qualifié",
-    description:
-      "Le Brevet d'Études Professionnelles offre une formation technique intermédiaire.",
-    filieres: [
-      "Électrotechnique",
-      "Mécanique Auto",
-      "Froid",
-      "Comptabilité",
-      "Secrétariat",
-      "Agroalimentaire",
-    ],
-  },
-  {
-    nom: "BAC PRO",
-    niveau: "Niveau 4",
-    duree: "3 ans",
-    acces: "3ème / BEP",
-    debouches: "Technicien",
-    description:
-      "Le Baccalauréat Professionnel forme des techniciens compétents prêts pour l'emploi.",
-    filieres: ["Toutes filières"],
+    filieres: ["Électricité d'Équipement (EE)"],
   },
   {
     nom: "BT",
     niveau: "Niveau 4",
-    duree: "2 ans après BEP",
-    acces: "BEP",
-    debouches: "Technicien supérieur",
+    duree: "2 ans",
+    acces: "BEPC / CAP",
+    debouches: "Technicien",
     description:
-      "Le Brevet de Technicien complète la formation technique avec des compétences avancées.",
-    filieres: ["Électrotechnique"],
-  },
-  {
-    nom: "BTS",
-    niveau: "Niveau 3",
-    duree: "2 ans après Bac",
-    acces: "Baccalauréat",
-    debouches: "Cadre technique",
-    description:
-      "Le Brevet de Technicien Supérieur forme des cadres techniques de haut niveau.",
+      "Le Brevet de Technicien forme des techniciens compétents dans les filières industrielles.",
     filieres: [
-      "Maintenance Systèmes",
-      "Gestion des Entreprises",
-      "Comptabilité",
+      "Électronique (ELN)",
+      "Froid et Climatisation (RCA)",
+      "Maintenance Véhicules et Engins (MVE)",
     ],
   },
 ];

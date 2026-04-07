@@ -22,42 +22,42 @@ const categories = [
     name: "Filières Industrielles",
     icon: Factory,
     description:
-      "Des formations techniques aux métiers de l'industrie et de la production.",
+      "4 filières techniques formant aux métiers de l'industrie, de l'électronique et de la maintenance.",
     filieres: [
       {
-        title: "Électrotechnique",
+        title: "Électronique (ELN)",
         description:
-          "Formation complète aux systèmes électriques industriels et domestiques, installation et maintenance.",
+          "Conception, installation et maintenance des systèmes et équipements électroniques industriels et grand public.",
         icon: Cpu,
-        diplomes: ["CAP", "BEP", "BAC PRO", "BT"],
-        duree: "2-4 ans",
-        href: "/filieres",
-      },
-      {
-        title: "Mécanique Automobile",
-        description:
-          "Diagnostic, réparation et maintenance des véhicules automobiles modernes.",
-        icon: Wrench,
-        diplomes: ["CAP", "BEP", "BAC PRO"],
-        duree: "2-3 ans",
-        href: "/filieres",
-      },
-      {
-        title: "Froid et Climatisation",
-        description:
-          "Installation et maintenance des systèmes de réfrigération et climatisation.",
-        icon: Snowflake,
-        diplomes: ["CAP", "BEP"],
+        diplomes: ["BT"],
         duree: "2 ans",
         href: "/filieres",
       },
       {
-        title: "Maintenance Systèmes Production",
+        title: "Électricité d'Équipement (EE)",
         description:
-          "Maintenance préventive et corrective des équipements de production industrielle.",
+          "Installation, câblage et maintenance des équipements électriques industriels et domestiques.",
+        icon: Wrench,
+        diplomes: ["CAP"],
+        duree: "2 ans",
+        href: "/filieres",
+      },
+      {
+        title: "Froid et Climatisation (RCA)",
+        description:
+          "Installation, entretien et dépannage des systèmes de réfrigération, climatisation et traitement de l'air.",
+        icon: Snowflake,
+        diplomes: ["BT"],
+        duree: "2 ans",
+        href: "/filieres",
+      },
+      {
+        title: "Maintenance Véhicules et Engins (MVE)",
+        description:
+          "Diagnostic, réparation et maintenance des véhicules automobiles et engins de travaux publics.",
         icon: Factory,
-        diplomes: ["BAC PRO", "BTS"],
-        duree: "2-3 ans",
+        diplomes: ["BT"],
+        duree: "2 ans",
         href: "/filieres",
       },
     ],

@@ -20,10 +20,6 @@ import {
   Wrench,
   Snowflake,
   Factory,
-  Building2,
-  Calculator,
-  Keyboard,
-  Wheat,
   FlaskConical,
   Bed,
   Utensils,
@@ -41,27 +37,27 @@ import Link from "next/link";
 
 const stats = [
   {
-    icon: Users,
-    value: "1500+",
-    label: "Élèves formés",
+    icon: BookOpen,
+    value: "4",
+    label: "Filières industrielles",
     color: "from-primary to-primary-light",
   },
   {
-    icon: BookOpen,
-    value: "12",
-    label: "Filières",
+    icon: Users,
+    value: "1ère",
+    label: "Promotion en cours",
     color: "from-secondary to-accent",
   },
   {
-    icon: Trophy,
-    value: "85%",
-    label: "Taux de réussite",
+    icon: Award,
+    value: "2",
+    label: "Diplômes (CAP, BT)",
     color: "from-accent to-light",
   },
   {
-    icon: Award,
-    value: "45",
-    label: "Enseignants",
+    icon: GraduationCap,
+    value: "2023",
+    label: "Année de création",
     color: "from-primary-dark to-primary",
   },
 ];
@@ -97,7 +93,7 @@ const filieres = [
       "Conception, installation et maintenance des systèmes et équipements électroniques.",
     icon: Cpu,
     diplomes: ["BT"],
-    duree: "2 ans",
+    duree: "3 ans",
     href: "/filieres",
   },
   {
@@ -115,7 +111,7 @@ const filieres = [
       "Installation, entretien et dépannage des systèmes de réfrigération et climatisation.",
     icon: Snowflake,
     diplomes: ["BT"],
-    duree: "2 ans",
+    duree: "3 ans",
     href: "/filieres",
   },
   {
@@ -124,34 +120,7 @@ const filieres = [
       "Diagnostic, réparation et maintenance des véhicules automobiles et engins lourds.",
     icon: Factory,
     diplomes: ["BT"],
-    duree: "2 ans",
-    href: "/filieres",
-  },
-  {
-    title: "Gestion des Entreprises",
-    description:
-      "Management, gestion administrative et commerciale des organisations.",
-    icon: Building2,
-    diplomes: ["BAC PRO", "BTS"],
-    duree: "2-3 ans",
-    href: "/filieres",
-  },
-  {
-    title: "Comptabilité et Gestion",
-    description:
-      "Techniques comptables, gestion financière et fiscale des entreprises.",
-    icon: Calculator,
-    diplomes: ["CAP", "BEP", "BAC PRO", "BTS"],
-    duree: "2-3 ans",
-    href: "/filieres",
-  },
-  {
-    title: "Productions Agricoles",
-    description:
-      "Techniques de production végétale et animale, gestion d'exploitations.",
-    icon: Wheat,
-    diplomes: ["CAPA", "BEPA", "BAC PRO"],
-    duree: "2-3 ans",
+    duree: "3 ans",
     href: "/filieres",
   },
 ];

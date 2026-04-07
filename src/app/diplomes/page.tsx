@@ -20,7 +20,7 @@ const diplomes = [
   {
     nom: "BT",
     niveau: "Niveau 4",
-    duree: "2 ans",
+    duree: "3 ans",
     acces: "BEPC / CAP",
     debouches: "Technicien",
     description:

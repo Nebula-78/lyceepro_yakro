@@ -391,7 +391,7 @@ export default function Hero({
               >
                 <Sparkles className="w-4 h-4 text-accent" />
                 <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-                Établissement d'excellence depuis 1985
+                Lycée Professionnel — Ouvert en 2023
               </motion.div>
 
               {/* Title with word-by-word animation */}

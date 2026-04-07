@@ -9,27 +9,22 @@ import { GraduationCap, Users, Building2, Handshake } from "lucide-react";
 
 const timeline = [
   {
-    year: "1985",
-    title: "Création du Lycée",
+    year: "2023",
+    title: "Construction du Lycée",
     description:
-      "Ouverture officielle du Lycée Professionnel de Yamoussoukro avec 3 filières initiales.",
+      "Bâtiment construit et équipé avec des installations modernes pour accueillir les premières filières industrielles.",
   },
   {
-    year: "1995",
-    title: "Expansion",
+    year: "2025",
+    title: "Inauguration officielle",
     description:
-      "Extension à 8 filières et construction des premiers laboratoires modernes.",
+      "Inauguration du Lycée Professionnel de Yamoussoukro en présence des autorités académiques.",
   },
   {
-    year: "2008",
-    title: "Modernisation",
+    year: "2025",
+    title: "Première promotion",
     description:
-      "Rénovation complète des infrastructures et intégration du numérique dans l'enseignement.",
-  },
-  {
-    year: "2024",
-    title: "Aujourd'hui",
-    description: "12 filières, 1500+ élèves et un taux de réussite de 85%.",
+      "Formation de la première promotion d'apprenants dans les 4 filières industrielles : ELN, EE, RCA, MVE.",
   },
 ];
 

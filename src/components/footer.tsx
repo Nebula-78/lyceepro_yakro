@@ -72,8 +72,8 @@ export default function Footer() {
               </div>
             </Link>
             <p className="text-white/70 text-sm leading-relaxed">
-              Centre d'excellence technique et formation professionnelle de
-              qualité depuis 1985. Nous formons les professionnels de demain.
+              Centre d'excellence technique inauguré en 2025. Nous formons les
+              professionnels de demain.
             </p>
             <div className="flex gap-3">
               {socialLinks.map((social) => (

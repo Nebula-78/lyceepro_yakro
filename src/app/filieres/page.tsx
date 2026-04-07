@@ -5,17 +5,7 @@ import PageHeader from "@/components/page-header";
 import SectionTitle from "@/components/section-title";
 import FiliereCard from "@/components/filiere-card";
 import { motion } from "framer-motion";
-import {
-  Cpu,
-  Wrench,
-  Snowflake,
-  Factory,
-  Building2,
-  Calculator,
-  Keyboard,
-  Wheat,
-  FlaskConical,
-} from "lucide-react";
+import { Cpu, Wrench, Snowflake, Factory } from "lucide-react";
 
 const categories = [
   {
@@ -30,7 +20,7 @@ const categories = [
           "Conception, installation et maintenance des systèmes et équipements électroniques industriels et grand public.",
         icon: Cpu,
         diplomes: ["BT"],
-        duree: "2 ans",
+        duree: "3 ans",
         href: "/filieres",
       },
       {
@@ -48,7 +38,7 @@ const categories = [
           "Installation, entretien et dépannage des systèmes de réfrigération, climatisation et traitement de l'air.",
         icon: Snowflake,
         diplomes: ["BT"],
-        duree: "2 ans",
+        duree: "3 ans",
         href: "/filieres",
       },
       {
@@ -57,68 +47,7 @@ const categories = [
           "Diagnostic, réparation et maintenance des véhicules automobiles et engins de travaux publics.",
         icon: Factory,
         diplomes: ["BT"],
-        duree: "2 ans",
-        href: "/filieres",
-      },
-    ],
-  },
-  {
-    name: "Filières Tertiaires",
-    icon: Building2,
-    description:
-      "Des formations aux métiers de la gestion, de la comptabilité et du secrétariat.",
-    filieres: [
-      {
-        title: "Gestion des Entreprises",
-        description:
-          "Management, gestion administrative et commerciale des organisations.",
-        icon: Building2,
-        diplomes: ["BAC PRO", "BTS"],
-        duree: "2-3 ans",
-        href: "/filieres",
-      },
-      {
-        title: "Comptabilité et Gestion",
-        description:
-          "Techniques comptables, gestion financière et fiscale des entreprises.",
-        icon: Calculator,
-        diplomes: ["CAP", "BEP", "BAC PRO", "BTS"],
-        duree: "2-3 ans",
-        href: "/filieres",
-      },
-      {
-        title: "Secrétariat Bureautique",
-        description:
-          "Gestion administrative, traitement de texte et organisation bureautique.",
-        icon: Keyboard,
-        diplomes: ["CAP", "BEP", "BAC PRO"],
-        duree: "2-3 ans",
-        href: "/filieres",
-      },
-    ],
-  },
-  {
-    name: "Filières Agricoles",
-    icon: Wheat,
-    description:
-      "Des formations aux métiers de l'agriculture et de l'agroalimentaire.",
-    filieres: [
-      {
-        title: "Productions Agricoles",
-        description:
-          "Techniques de production végétale et animale, gestion d'exploitations agricoles.",
-        icon: Wheat,
-        diplomes: ["CAPA", "BEPA", "BAC PRO"],
-        duree: "2-3 ans",
-        href: "/filieres",
-      },
-      {
-        title: "Agroalimentaire",
-        description:
-          "Transformation, conservation et commercialisation des produits alimentaires.",
-        icon: FlaskConical,
-        diplomes: ["CAP", "BEP", "BAC PRO"],
-        duree: "2-3 ans",
+        duree: "3 ans",
         href: "/filieres",
       },
     ],
@@ -129,20 +58,22 @@ export default function FilieresPage() {
   return (
     <>
       <Navbar />
+
       <PageHeader
         title="Nos Filières"
-        subtitle="12 filières de formation réparties en 3 catégories pour des carrières d'avenir."
+        subtitle="4 filières industrielles pour des carrières techniques d'avenir."
       />
 
       {/* Filières */}
       {categories.map((category, catIndex) => (
         <section
           key={category.name}
-          className={`bg-african-pattern relative overflow-hidden section-padding ${catIndex % 2 === 0 ? "" : "bg-muted/30"}`}
+          className="section-padding bg-african-pattern relative overflow-hidden"
         >
           <div className="absolute -top-20 -left-20 w-60 h-60 bg-gradient-to-br from-primary/5 to-transparent rounded-full blur-3xl" />
-          <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-gradient-to-br from-accent/5 to-transparent rounded-full blur-3xl" />
-          <div className="relative container-custom">
+          <div className="absolute -bottom-20 -right-20 w-60 h-60 bg-gradient-to-tr from-secondary/5 to-transparent rounded-full blur-3xl" />
+
+          <div className="container-custom relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
